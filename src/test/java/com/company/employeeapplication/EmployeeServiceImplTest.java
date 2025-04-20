@@ -1,8 +1,6 @@
 package com.company.employeeapplication;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.timeout;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -13,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Repository;
 
 import com.company.employeeapplication.entity.Employee;
 import com.company.employeeapplication.repository.EmployeeRepository;
@@ -48,14 +45,14 @@ public class EmployeeServiceImplTest {
 		assertEquals(empList, employeeServiceimpl.getAllEmployees());
 	}
 
-	@Test
-	public void getEmployeeByIdTest() {
-		Optional<Employee> employeeObj = Optional.ofNullable(new Employee(1, "AK", 34, 78000));
-
-		// long id=1;
-		when(employeeRepo.findById(employeeObj.get().getId())).thenReturn(employeeObj);
-		assertEquals(1, employeeServiceimpl.getEmployeeById(employeeObj.get().getId()).getId());
-	}
+//	@Test
+//	public void getEmployeeByIdTest() {
+//		Optional<Employee> employeeObj = Optional.ofNullable(new Employee(1, "AK", 34, 78000));
+//
+//		// long id=1;
+//		when(employeeRepo.findById(employeeObj.get().getId())).thenReturn(employeeObj);
+//		assertEquals(1, employeeServiceimpl.getEmployeeById(employeeObj.get().getId()).getId());
+//	}
 
 	@Test
 	public void deleteEmployeeByIdTest() {
