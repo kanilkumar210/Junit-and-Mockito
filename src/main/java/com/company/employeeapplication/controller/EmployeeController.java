@@ -19,11 +19,11 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeService employeeService;
 
-	@PostMapping("/save")
-	public Employee saveEmployee(@RequestBody Employee employee) {
-		System.out.println("Controller...");
-		return employeeService.saveEmployee(employee);
-	}
+//	@PostMapping("/save")
+//	public Employee saveEmployee(@RequestBody Employee employee) {
+//		System.out.println("Controller...");
+//		return employeeService.saveEmployee(employee);
+//	}
 
 	@GetMapping("/getEmployees")
 	public List<Employee> getAllEmployees() {
