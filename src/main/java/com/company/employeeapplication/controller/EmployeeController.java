@@ -25,17 +25,17 @@ public class EmployeeController {
 		return employeeService.saveEmployee(employee);
 	}
 
-//	@GetMapping("/getEmployees")
-//	public List<Employee> getAllEmployees() {
-//		System.out.println("Controller...");
-//		return employeeService.getAllEmployees();
-//	}
-
-	@GetMapping("/getEmployeeById/{id}")
-	public Employee getEmployeeById(@PathVariable("id") long id) {
+	@GetMapping("/getEmployees")
+	public List<Employee> getAllEmployees() {
 		System.out.println("Controller...");
-		return employeeService.getEmployeeById(id);
+		return employeeService.getAllEmployees();
 	}
+
+//	@GetMapping("/getEmployeeById/{id}")
+//	public Employee getEmployeeById(@PathVariable("id") long id) {
+//		System.out.println("Controller...");
+//		return employeeService.getEmployeeById(id);
+//	}
 
 	@DeleteMapping("/deleteEmployee/{id}")
 	public String deleteEmployeeById(@PathVariable("id") long id) {
