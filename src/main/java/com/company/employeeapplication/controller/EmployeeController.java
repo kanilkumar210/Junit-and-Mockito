@@ -25,11 +25,11 @@ public class EmployeeController {
 		return employeeService.saveEmployee(employee);
 	}
 
-//	@GetMapping("/getEmployees")
-//	public List<Employee> getAllEmployees() {
-//		System.out.println("Controller...");
-//		return employeeService.getAllEmployees();
-//	}
+	@GetMapping("/getEmployees")
+	public List<Employee> getAllEmployees() {
+		System.out.println("Controller...");
+		return employeeService.getAllEmployees();
+	}
 
 	@GetMapping("/getEmployeeById/{id}")
 	public Employee getEmployeeById(@PathVariable("id") long id) {
