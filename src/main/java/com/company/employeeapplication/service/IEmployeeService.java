@@ -14,4 +14,5 @@ public interface IEmployeeService {
 
 	String deleteEmployee(long id);
 
+    List<String> getNamesBySalary(long salary);
 }

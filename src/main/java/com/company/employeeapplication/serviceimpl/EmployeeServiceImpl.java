@@ -42,4 +42,19 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
 	}
 
+//    @Override
+//    public List<String> getNamesBySalary(long salary) {
+//        return List.of();
+//    }
+
+    @Override
+    public List<String> getNamesBySalary(long salary) {
+        return employeeRepository.getNamesBySalary(salary);
+    }
+
+//    @Override
+//    public List<String> getNameAndSalaryByDeptName(String deptName) {
+//        return employeeRepository.getNamesByDeptName(deptName);
+//    }
+
 }
